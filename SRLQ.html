@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Is Really Blocking Your Strength After 40? | Strength Realized</title>
+<meta name="description" content="A two-minute, evidence-based assessment from coach Liz Cairo. Built for women 40 and over.">
+
+<!--
+  STRENGTH REALIZED LEAD QUIZ
+  Single-file, drop-anywhere quiz app.
+  Configure the CONFIG object below before deploying.
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #FAF8F6;
+  --bg-card: #FFFFFF;
+  --ink: #1A1A1A;
+  --ink-soft: #4A4A4A;
+  --ink-muted: #8A8A8A;
+  --line: #E8E2DC;
+  --line-soft: #F0EBE6;
+  --accent: #B8345A;
+  --accent-soft: #F5E4EA;
+  --accent-deep: #8E1F40;
+  --gradient-soft: linear-gradient(135deg, #FAF8F6 0%, #F5E4EA 100%);
+  --shadow-sm: 0 1px 2px rgba(26, 26, 26, 0.04);
+  --shadow-md: 0 4px 24px rgba(26, 26, 26, 0.06);
+  --shadow-lg: 0 12px 48px rgba(26, 26, 26, 0.08);
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Manrope', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── BRAND BAR ─── */
+.brand {
+  text-align: center;
+  margin-bottom: 56px;
+  letter-spacing: 0.28em;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+}
+
+.brand .dot {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 50%;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
+/* ─── PROGRESS ─── */
+.progress {
+  margin-bottom: 40px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.progress.visible { opacity: 1; }
+
+.progress-bar {
+  height: 2px;
+  background: var(--line);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--accent);
+  width: 0%;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.progress-label {
+  font-size: 12px;
+  color: var(--ink-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* ─── SCREENS ─── */
+.screen { display: none; animation: fadeUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.screen.active { display: block; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── INTRO ─── */
+.intro { text-align: center; padding: 24px 0; }
+
+.intro-eyebrow {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 16px;
+  color: var(--accent);
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+
+.intro h1 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(36px, 6vw, 56px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 28px;
+  font-variation-settings: 'opsz' 144;
+}
+
+.intro h1 em {
+  font-style: italic;
+  color: var(--accent);
+  font-weight: 400;
+}
+
+.intro-sub {
+  font-size: 17px;
+  color: var(--ink-soft);
+  max-width: 520px;
+  margin: 0 auto 48px;
+  line-height: 1.6;
+}
+
+.intro-meta {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  text-align: center;
+}
+
+.meta-num {
+  font-family: 'Fraunces', serif;
+  font-size: 32px;
+  color: var(--accent);
+  display: block;
+  line-height: 1;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.meta-label {
+  font-size: 11px;
+  color: var(--ink-muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.intro-attribution {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 15px;
+  color: var(--ink-muted);
+  margin-top: 32px;
+}
+
+/* ─── QUESTIONS ─── */
+.q-number {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--accent);
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+}
+
+.q-text {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 36px;
+  font-variation-settings: 'opsz' 144;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.option {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  font-family: inherit;
+  font-size: 16px;
+  color: var(--ink);
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.option:hover {
+  border-color: var(--accent);
+  background: var(--bg-card);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.option.selected {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.option-marker {
+  width: 22px;
+  height: 22px;
+  border: 1.5px solid var(--line);
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.option:hover .option-marker { border-color: var(--accent); }
+
+.option.selected .option-marker {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.option.selected .option-marker::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+}
+
+/* ─── BUTTONS ─── */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.btn {
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 14px 32px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.02em;
+}
+
+.btn-primary {
+  background: var(--ink);
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--accent);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink-muted);
+  padding: 14px 16px;
+}
+
+.btn-ghost:hover { color: var(--ink); }
+
+.btn-large {
+  padding: 18px 48px;
+  font-size: 16px;
+}
+
+/* ─── EMAIL CAPTURE ─── */
+.capture { text-align: center; padding: 24px 0; }
+
+.capture-eyebrow {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  color: var(--accent);
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.capture h2 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(28px, 5vw, 40px);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+  font-variation-settings: 'opsz' 144;
+}
+
+.capture-sub {
+  color: var(--ink-soft);
+  margin-bottom: 36px;
+  max-width: 460px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form {
+  max-width: 420px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input {
+  font-family: inherit;
+  font-size: 16px;
+  padding: 16px 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  color: var(--ink);
+  transition: border-color 0.2s ease;
+  width: 100%;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.input.error { border-color: var(--accent); }
+
+.form .btn { margin-top: 8px; }
+
+.privacy {
+  font-size: 12px;
+  color: var(--ink-muted);
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+/* ─── RESULT ─── */
+.result { padding: 16px 0; }
+
+.result-eyebrow {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 16px;
+  color: var(--ink-muted);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.result-title {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(40px, 7vw, 64px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 24px;
+  font-variation-settings: 'opsz' 144;
+}
+
+.result-subtitle {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: clamp(18px, 3vw, 22px);
+  text-align: center;
+  color: var(--ink);
+  max-width: 540px;
+  margin: 0 auto 56px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.result-divider {
+  height: 1px;
+  background: var(--line);
+  margin: 56px 0;
+  position: relative;
+}
+
+.result-divider::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px var(--bg);
+}
+
+.result h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: var(--ink);
+}
+
+.result p {
+  color: var(--ink-soft);
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.result-list {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+}
+
+.result-list li {
+  padding: 16px 0 16px 32px;
+  border-bottom: 1px solid var(--line-soft);
+  position: relative;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.result-list li:last-child { border-bottom: none; }
+
+.result-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 24px;
+  width: 16px;
+  height: 1px;
+  background: var(--accent);
+}
+
+/* ─── CTA CARD ─── */
+.cta-card {
+  background: var(--gradient-soft);
+  border: 1px solid var(--accent-soft);
+  border-radius: var(--radius-lg);
+  padding: 48px 40px;
+  margin-top: 56px;
+  text-align: center;
+}
+
+.cta-card h3 {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  color: var(--ink);
+}
+
+.cta-card p {
+  margin-bottom: 28px;
+  color: var(--ink-soft);
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-card .btn { background: var(--accent); }
+
+.cta-card .btn:hover {
+  background: var(--accent-deep);
+  box-shadow: 0 8px 24px rgba(184, 52, 90, 0.25);
+}
+
+/* ─── FOOTER ─── */
+.footer {
+  margin-top: auto;
+  padding-top: 80px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--ink-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ─── PILLARS ─── */
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 32px 0;
+}
+
+.pillar {
+  text-align: center;
+  padding: 20px 12px;
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+}
+
+.pillar-label {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.pillar-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--ink);
+}
+
+@media (max-width: 540px) {
+  .app { padding: 32px 20px 60px; }
+  .brand { margin-bottom: 36px; }
+  .controls { flex-direction: column-reverse; gap: 12px; }
+  .controls .btn { width: 100%; }
+  .intro-meta { gap: 28px; }
+  .cta-card { padding: 36px 24px; }
+  .option { padding: 16px 18px; font-size: 15px; }
+  .pillars { grid-template-columns: 1fr; }
+}
+
+/* ─── LOADING ─── */
+.loading {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+
+<main class="app">
+
+  <div class="brand">
+    Strength <span class="dot"></span> Realized
+  </div>
+
+  <div class="progress" id="progress">
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="progress-label" id="progressLabel">Question 1 of 10</div>
+  </div>
+
+  <!-- ─── INTRO SCREEN ─── -->
+  <section class="screen active" id="screen-intro">
+    <div class="intro">
+      <div class="intro-eyebrow">A two-minute assessment</div>
+      <h1>What is really blocking your <em>strength</em> after 40?</h1>
+      <p class="intro-sub">If what used to work no longer does, you are not alone. After 40, the body changes in ways that ask for a different approach. This evidence-based quiz tells you what is most likely blocking your progress, and what to do about it.</p>
+
+      <div class="intro-meta">
+        <div class="meta-item">
+          <span class="meta-num">10</span>
+          <span class="meta-label">Questions</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-num">2</span>
+          <span class="meta-label">Minutes</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-num">4</span>
+          <span class="meta-label">Result Types</span>
+        </div>
+      </div>
+
+      <button class="btn btn-primary btn-large" onclick="startQuiz()">Begin the assessment</button>
+
+      <div class="intro-attribution">Built by Liz Cairo, founder of Strength Realized.</div>
+    </div>
+  </section>
+
+  <!-- ─── QUIZ SCREEN ─── -->
+  <section class="screen" id="screen-quiz">
+    <div class="q-number" id="qNumber">Question 01</div>
+    <h2 class="q-text" id="qText"></h2>
+    <div class="options" id="options"></div>
+    <div class="controls">
+      <button class="btn btn-ghost" id="btnBack" onclick="goBack()">← Back</button>
+      <button class="btn btn-primary" id="btnNext" onclick="goNext()" disabled>Continue →</button>
+    </div>
+  </section>
+
+  <!-- ─── EMAIL CAPTURE SCREEN ─── -->
+  <section class="screen" id="screen-capture">
+    <div class="capture">
+      <div class="capture-eyebrow">Your result is ready</div>
+      <h2>Where should we send your personalized result?</h2>
+      <p class="capture-sub">You will receive your full result, plus a short series of emails from Liz on what to do next. No spam. Unsubscribe anytime.</p>
+
+      <div class="form">
+        <input type="text" class="input" id="firstName" placeholder="First name" autocomplete="given-name">
+        <input type="email" class="input" id="email" placeholder="Email address" autocomplete="email">
+        <button class="btn btn-primary btn-large" id="btnSubmit" onclick="submitCapture()">See my result</button>
+        <p class="privacy">By continuing you agree to receive emails from Strength Realized. We will never share your information.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── RESULT SCREEN ─── -->
+  <section class="screen" id="screen-result">
+    <div class="result">
+      <div class="result-eyebrow">Your result</div>
+      <h1 class="result-title" id="resultTitle"></h1>
+      <p class="result-subtitle" id="resultSubtitle"></p>
+
+      <p id="resultIntro"></p>
+
+      <div class="pillars">
+        <div class="pillar"><div class="pillar-label">Pillar 1</div><div class="pillar-name">Real Evidence</div></div>
+        <div class="pillar"><div class="pillar-label">Pillar 2</div><div class="pillar-name">Real Strength</div></div>
+        <div class="pillar"><div class="pillar-label">Pillar 3</div><div class="pillar-name">Real Fuel</div></div>
+      </div>
+
+      <div class="result-divider"></div>
+
+      <h3>What this means</h3>
+      <p id="resultMeaning"></p>
+
+      <h3>What to do about it</h3>
+      <ul class="result-list" id="resultActions"></ul>
+
+      <div class="cta-card">
+        <h3 id="ctaHeadline"></h3>
+        <p id="ctaCopy"></p>
+        <a class="btn btn-large" id="ctaButton" target="_blank" rel="noopener">Book your free call →</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">© Strength Realized · Liz Cairo</div>
+
+</main>
+
+<script>
+/* ============================================================
+   CONFIG - UPDATE BEFORE DEPLOYING
+   ============================================================ */
+const CONFIG = {
+  // Zapier "Catch Hook" webhook URL.
+  // Get this from Zapier: create a new Zap, choose "Webhooks by Zapier"
+  // as the trigger, select "Catch Hook", then copy the custom webhook URL.
+  // Leave as null to disable (data logs to browser console for testing).
+  webhookUrl: null,
+
+  // Booking link for the discovery call (Calendly, TidyCal, Acuity, etc.)
+  bookingUrl: 'https://calendly.com/strengthrealizedmethod/30min',
+
+  // Optional: where to redirect after webhook submit (leave null to stay on result page)
+  redirectAfterSubmit: null,
+};
+
+/* ============================================================
+   QUIZ DATA
+   ============================================================ */
+const QUESTIONS = [
+  {
+    text: "When you think about your current workouts, what describes you best?",
+    answers: [
+      { text: "I do mostly cardio. Walking, cycling, classes, or running.", scores: { C: 3, R: 1 } },
+      { text: "I lift weights, but I am not sure if I am progressing.", scores: { I: 3 } },
+      { text: "I jump between workout styles depending on my mood or schedule.", scores: { I: 2, R: 1 } },
+      { text: "I push hard most days. Strength, cardio, classes, all of it.", scores: { R: 3, C: 1 } },
+    ],
+  },
+  {
+    text: "How would you describe your protein intake on most days?",
+    answers: [
+      { text: "I rarely think about protein. I just eat what feels normal.", scores: { U: 3 } },
+      { text: "I try, but I am probably not getting enough.", scores: { U: 2, I: 1 } },
+      { text: "I get protein at dinner, but breakfast and lunch are lighter.", scores: { U: 2 } },
+      { text: "I prioritize protein at every meal.", scores: { I: 1 } },
+    ],
+  },
+  {
+    text: "How do you feel one to two hours after eating breakfast?",
+    answers: [
+      { text: "Hungry again, or reaching for coffee or sugar.", scores: { U: 3 } },
+      { text: "Fine, but I crash by mid-afternoon.", scores: { U: 2 } },
+      { text: "Steady. I can go a few hours without thinking about food.", scores: { I: 1 } },
+      { text: "I usually skip breakfast.", scores: { U: 3, R: 1 } },
+    ],
+  },
+  {
+    text: "How is your sleep these days?",
+    answers: [
+      { text: "I fall asleep fine but wake up at 2 or 3 in the morning.", scores: { R: 3, U: 1 } },
+      { text: "I have trouble falling asleep. My mind races.", scores: { R: 3 } },
+      { text: "I sleep, but I never wake up feeling rested.", scores: { R: 2 } },
+      { text: "Sleep is generally good.", scores: { I: 1 } },
+    ],
+  },
+  {
+    text: "How would you describe your energy through the day?",
+    answers: [
+      { text: "Wired in the morning, crashed by afternoon.", scores: { R: 2, U: 1 } },
+      { text: "Low all day. I push through with caffeine.", scores: { R: 3, U: 2 } },
+      { text: "It depends on what I ate and how I slept.", scores: { U: 1, R: 1 } },
+      { text: "Pretty steady most days.", scores: { I: 1 } },
+    ],
+  },
+  {
+    text: "When you train, do you track what you lifted last time?",
+    answers: [
+      { text: "No. I do not really track anything.", scores: { I: 3, C: 1 } },
+      { text: "Sometimes. Not consistently.", scores: { I: 2 } },
+      { text: "Yes. I follow a structured progression.", scores: {} },
+      { text: "I do not lift heavy enough to need to track.", scores: { C: 2, I: 2 } },
+    ],
+  },
+  {
+    text: "How has your body composition changed in the last few years?",
+    answers: [
+      { text: "Softer, even though I am doing the same things that used to work.", scores: { C: 3, U: 1 } },
+      { text: "More belly fat, less definition in my arms and legs.", scores: { C: 2, U: 2 } },
+      { text: "I have lost weight, but I feel weaker, not stronger.", scores: { U: 3, R: 1 } },
+      { text: "I feel okay, but I want to feel stronger.", scores: { I: 2 } },
+    ],
+  },
+  {
+    text: "How often do you take a true rest day, no workout, no long walk, nothing structured?",
+    answers: [
+      { text: "Almost never. I feel guilty when I rest.", scores: { R: 3 } },
+      { text: "Once a week, maybe.", scores: { R: 1 } },
+      { text: "Two or more times a week.", scores: { I: 1 } },
+      { text: "Most days. I am not training consistently.", scores: { I: 2 } },
+    ],
+  },
+  {
+    text: "How would you describe your stress level over the last six months?",
+    answers: [
+      { text: "High. Work, family, life. I am running on fumes.", scores: { R: 3, U: 1 } },
+      { text: "Moderate, but I manage.", scores: { R: 1 } },
+      { text: "It comes in waves.", scores: { R: 1 } },
+      { text: "Manageable. I have systems that work.", scores: {} },
+    ],
+  },
+  {
+    text: "What feels like the biggest gap in your routine right now?",
+    answers: [
+      { text: "I need a real strength plan. I am winging it.", scores: { I: 3 } },
+      { text: "I need to eat more, especially protein.", scores: { U: 3 } },
+      { text: "I need to stop relying on cardio.", scores: { C: 3 } },
+      { text: "I need to slow down and recover.", scores: { R: 3 } },
+    ],
+  },
+];
+
+const RESULTS = {
+  C: {
+    title: "The Cardio Loyalist",
+    subtitle: "You are doing what used to work. Your body is asking for something different.",
+    intro: "If you have been walking, cycling, or doing classes and the scale, the mirror, or your energy stopped responding, you are not failing. The method is. Cardio alone does not build the muscle your body needs after 40, and muscle is the tissue that protects your metabolism, your bones, and your independence for the next thirty years.",
+    meaning: "After 40, estrogen begins shifting in ways that make muscle harder to build and easier to lose. Cardio burns calories in the moment. Strength training changes what your body does at rest. Without strength work, you can train hours a week and still see your body soften. This is not about your effort. It is about the input.",
+    actions: [
+      "Add two to three strength sessions per week, focused on compound movements.",
+      "Prioritize form and time under tension over speed or weight.",
+      "Keep cardio for cardiovascular health and joy, not as your primary training.",
+      "Track what you lift. Progress requires a plan.",
+    ],
+    ctaHeadline: "Ready to build the strength your body is asking for?",
+    ctaCopy: "The Strength Realized Method is built for women whose bodies have changed. Book a free 30-minute call with Liz and we will talk through where you are and what a real plan looks like for you.",
+  },
+  U: {
+    title: "The Under-Fueler",
+    subtitle: "You are not eating enough. Especially protein.",
+    intro: "Many women over 40 have spent decades being told to eat less. The result is a body that no longer has the raw materials to build muscle, stabilize blood sugar, or recover from training. Under-eating is not the path to a leaner body after 40. It is the path to a softer, weaker, more tired one.",
+    meaning: "Protein is the building block of muscle. Without enough of it, your body cannot repair what training breaks down. Add unstable blood sugar to that, and you get cravings, energy crashes, and stubborn body composition changes. The fix is not a diet. It is a different relationship with food.",
+    actions: [
+      "Aim for protein at every meal. Start with breakfast.",
+      "Pair carbs with protein and fat. No naked carbs.",
+      "Eat enough. Under-eating slows the same metabolism you are trying to support.",
+      "Whole food first. Supplements second.",
+    ],
+    ctaHeadline: "Ready to fuel a body that builds?",
+    ctaCopy: "Real Fuel is one of the three pillars of the Strength Realized Method. Book a free 30-minute call with Liz and learn what fueling for strength actually looks like for your body.",
+  },
+  I: {
+    title: "The Inconsistent Builder",
+    subtitle: "You are training. You are not progressing. There is a difference.",
+    intro: "You show up. You move your body. You care about your health. The gap is not effort. It is structure. Without a plan, without progression, without tracking, training becomes activity. Activity is good for you. It is not what builds the muscle, strength, and metabolic health your body needs after 40.",
+    meaning: "Muscle responds to progressive overload. That means lifting a little more, or for a little longer, or with better form, over time. Without that signal, your body has no reason to adapt. You can train for years and stay the same. The good news is that the fix is small. A real plan, followed consistently, changes everything.",
+    actions: [
+      "Follow a structured strength program. Stop improvising.",
+      "Track your lifts. If you cannot remember what you did last week, you cannot progress.",
+      "Train each major movement pattern weekly. Push, pull, hinge, squat, carry.",
+      "Consistency beats intensity. Three real sessions a week beats six scattered ones.",
+    ],
+    ctaHeadline: "Ready to turn effort into results?",
+    ctaCopy: "The Strength Realized Method gives you the structure your training has been missing. Book a free 30-minute call with Liz to talk through what a real plan would look like for your body and your life.",
+  },
+  R: {
+    title: "The Recovery-Depleted",
+    subtitle: "You are doing too much. Your body is asking you to listen.",
+    intro: "You are the woman who pushes. Workouts, work, family, everything. You believe more is better, harder is stronger, rest is weakness. After 40, that equation flips. Cortisol climbs. Sleep fragments. Body composition stops responding. Your nervous system needs as much attention as your muscles.",
+    meaning: "Recovery is when adaptation happens. Without it, training breaks you down without building you back up. Belly fat, poor sleep, low energy, and stubborn body composition are often signs of an over-trained, under-recovered system. The answer is not less commitment. It is smarter input.",
+    actions: [
+      "Replace high-intensity intervals with strength training. No HIIT for women over 40.",
+      "Take at least two true rest days per week.",
+      "Prioritize sleep like it is part of your training. Because it is.",
+      "Eat enough to support what you are asking your body to do.",
+    ],
+    ctaHeadline: "Ready to train in a way your body can actually recover from?",
+    ctaCopy: "The Strength Realized Method is built around purposeful training and real recovery. Book a free 30-minute call with Liz to talk through where you are and where you could go.",
+  },
+};
+
+// Tie-breaker priority (protects the woman whose body is most at risk)
+const TIE_PRIORITY = ['R', 'U', 'C', 'I'];
+
+/* ============================================================
+   STATE
+   ============================================================ */
+const state = {
+  currentQ: 0,
+  answers: new Array(QUESTIONS.length).fill(null), // index of selected answer per question
+  scores: { C: 0, U: 0, I: 0, R: 0 },
+  result: null,
+  email: '',
+  firstName: '',
+};
+
+/* ============================================================
+   FLOW
+   ============================================================ */
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function startQuiz() {
+  state.currentQ = 0;
+  document.getElementById('progress').classList.add('visible');
+  renderQuestion();
+  showScreen('screen-quiz');
+}
+
+function renderQuestion() {
+  const q = QUESTIONS[state.currentQ];
+  document.getElementById('qNumber').textContent = `Question ${String(state.currentQ + 1).padStart(2, '0')}`;
+  document.getElementById('qText').textContent = q.text;
+
+  const optionsEl = document.getElementById('options');
+  optionsEl.innerHTML = '';
+  q.answers.forEach((a, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'option' + (state.answers[state.currentQ] === i ? ' selected' : '');
+    btn.innerHTML = `<span class="option-marker"></span><span>${a.text}</span>`;
+    btn.onclick = () => selectAnswer(i);
+    optionsEl.appendChild(btn);
+  });
+
+  // Progress
+  const pct = ((state.currentQ) / QUESTIONS.length) * 100;
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressLabel').textContent = `Question ${state.currentQ + 1} of ${QUESTIONS.length}`;
+
+  // Buttons
+  document.getElementById('btnBack').style.visibility = state.currentQ === 0 ? 'hidden' : 'visible';
+  document.getElementById('btnNext').disabled = state.answers[state.currentQ] === null;
+  document.getElementById('btnNext').textContent = state.currentQ === QUESTIONS.length - 1 ? 'See my result →' : 'Continue →';
+}
+
+function selectAnswer(i) {
+  state.answers[state.currentQ] = i;
+  renderQuestion();
+}
+
+function goNext() {
+  if (state.answers[state.currentQ] === null) return;
+
+  if (state.currentQ < QUESTIONS.length - 1) {
+    state.currentQ++;
+    renderQuestion();
+  } else {
+    // Quiz complete
+    calculateResult();
+    document.getElementById('progressFill').style.width = '100%';
+    document.getElementById('progress').classList.remove('visible');
+    showScreen('screen-capture');
+  }
+}
+
+function goBack() {
+  if (state.currentQ > 0) {
+    state.currentQ--;
+    renderQuestion();
+  }
+}
+
+function calculateResult() {
+  // Reset and tally
+  state.scores = { C: 0, U: 0, I: 0, R: 0 };
+  state.answers.forEach((answerIdx, qIdx) => {
+    if (answerIdx === null) return;
+    const scores = QUESTIONS[qIdx].answers[answerIdx].scores;
+    Object.keys(scores).forEach(k => {
+      state.scores[k] = (state.scores[k] || 0) + scores[k];
+    });
+  });
+
+  // Find highest with tie-break priority
+  const max = Math.max(...Object.values(state.scores));
+  const tied = TIE_PRIORITY.filter(k => state.scores[k] === max);
+  state.result = tied[0];
+}
+
+function validateEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+async function submitCapture() {
+  const firstName = document.getElementById('firstName').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const btn = document.getElementById('btnSubmit');
+  const emailEl = document.getElementById('email');
+  const nameEl = document.getElementById('firstName');
+
+  emailEl.classList.remove('error');
+  nameEl.classList.remove('error');
+
+  if (!firstName) { nameEl.classList.add('error'); nameEl.focus(); return; }
+  if (!validateEmail(email)) { emailEl.classList.add('error'); emailEl.focus(); return; }
+
+  state.firstName = firstName;
+  state.email = email;
+
+  // Disable button + spinner
+  btn.disabled = true;
+  btn.innerHTML = 'Sending<span class="loading"></span>';
+
+  // Build payload - flat structure for clean Zapier field mapping
+  const payload = {
+    // Subscriber identity
+    first_name: firstName,
+    email: email,
+
+    // Result data (used to apply the right Kit tag)
+    result_code: state.result,                           // C, U, I, or R
+    result_name: RESULTS[state.result].title,            // e.g. "The Cardio Loyalist"
+    result_tag: 'quiz-result-' + RESULTS[state.result].title.toLowerCase().replace(/[^a-z]+/g, '-'),
+
+    // Score breakdown
+    score_cardio_loyalist: state.scores.C || 0,
+    score_under_fueler: state.scores.U || 0,
+    score_inconsistent_builder: state.scores.I || 0,
+    score_recovery_depleted: state.scores.R || 0,
+
+    // Full answer log (useful for analytics, segmentation, and future personalization)
+    answers_summary: state.answers.map((a, i) =>
+      `Q${i + 1}: ${a !== null ? QUESTIONS[i].answers[a].text : '(skipped)'}`
+    ).join(' | '),
+
+    // Meta
+    submitted_at: new Date().toISOString(),
+    source: 'strength-realized-quiz',
+    page_url: window.location.href,
+  };
+
+  // Send to webhook (or log if not configured)
+  try {
+    if (CONFIG.webhookUrl) {
+      await fetch(CONFIG.webhookUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+    } else {
+      console.log('[Strength Realized Quiz] Lead captured (webhook not configured):', payload);
+    }
+  } catch (err) {
+    console.error('[Strength Realized Quiz] Submit failed:', err);
+    // Continue anyway - show the result so the user gets value
+  }
+
+  if (CONFIG.redirectAfterSubmit) {
+    window.location.href = CONFIG.redirectAfterSubmit;
+    return;
+  }
+
+  renderResult();
+  showScreen('screen-result');
+}
+
+function renderResult() {
+  const r = RESULTS[state.result];
+  document.getElementById('resultTitle').textContent = r.title;
+  document.getElementById('resultSubtitle').textContent = r.subtitle;
+  document.getElementById('resultIntro').textContent = r.intro;
+  document.getElementById('resultMeaning').textContent = r.meaning;
+
+  const list = document.getElementById('resultActions');
+  list.innerHTML = '';
+  r.actions.forEach(a => {
+    const li = document.createElement('li');
+    li.textContent = a;
+    list.appendChild(li);
+  });
+
+  document.getElementById('ctaHeadline').textContent = r.ctaHeadline;
+  document.getElementById('ctaCopy').textContent = r.ctaCopy;
+  document.getElementById('ctaButton').href = CONFIG.bookingUrl;
+}
+</script>
+
+</body>
+</html>
